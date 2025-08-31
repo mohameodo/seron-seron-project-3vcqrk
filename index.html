@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneIn World - Global Radio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <div id="preloader" class="fixed inset-0 bg-gray-50 z-50 flex items-center justify-center">
+        <div class="loader"></div>
+    </div>
+
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-40 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-600 flex items-center gap-2">
+                <i class="fas fa-globe-americas"></i>
+                <span>TuneIn World</span>
+            </a>
+            <div class="w-full max-w-md relative">
+                <input type="search" id="searchInput" placeholder="Search for stations, genres, countries..." class="w-full bg-gray-100 border border-gray-200 rounded-full py-2.5 pl-12 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                <i class="fas fa-search text-gray-400 absolute left-5 top-1/2 -translate-y-1/2"></i>
+            </div>
+            <nav>
+                <a href="#favorites" id="favorites-link" class="text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorites</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <div id="search-results" class="hidden mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-700">Search Results</h2>
+            <div id="search-results-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"></div>
+        </div>
+
+        <section id="top-stations" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-700">Top Stations</h2>
+            <div id="top-stations-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"></div>
+        </section>
+
+        <section id="favorites" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-700">My Favorites</h2>
+            <div id="favorites-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"></div>
+            <p id="no-favorites-message" class="text-gray-500 hidden">You haven't added any favorite stations yet.</p>
+        </section>
+        
+        <section id="countries" class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-gray-700">Browse by Country</h2>
+            <div id="countries-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
+        </section>
+    </main>
+
+    <a href="https://seron.dev" target="_blank" class="fixed bottom-4 right-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg hover:bg-blue-700 transition-transform hover:scale-105 z-50">
+        Made by Seron
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
